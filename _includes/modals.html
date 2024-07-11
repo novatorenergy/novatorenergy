@@ -28,15 +28,15 @@
                 alt="{{ project.alt }}"
               />
               <p>{{ project.content }}</p>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times"></i>
-                {{ site.data.sitetext[site.locale].portfolio.closebutton |
-                default: "Close Project" }}
-              </button>
+              {% if project.ispartner %}
+              <img
+                class="img-fluid d-block mx-auto"
+                src="{{ project.partner_logo }}"
+                alt=""
+                height="200px"
+                width="300px"
+              />
+              {% endif %}
             </div>
           </div>
         </div>
@@ -72,15 +72,15 @@
                 alt="{{ project.alt }}"
               />
               <p>{{ project.content }}</p>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
-                <i class="fas fa-times"></i>
-                {{ site.data.sitetext.portfolio.closebutton |
-                default: "Close Project" }}
-              </button>
+              {% if project.ispartner %}
+              <img
+                class="img-fluid d-block mx-auto"
+                src="{{ project.partner_logo }}"
+                alt=""
+                height="200px"
+                width="300px"
+              />
+              {% endif %}
             </div>
           </div>
         </div>
